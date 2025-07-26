@@ -58,31 +58,27 @@ header .container {
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .brand-logo img {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  border-radius: 8px;
-  border: 1.5px solid white;
-  object-fit: cover;
+  height: 40px;
+  width: auto; /* Ширина подгоняется по изображению */
+  margin-right: 12px; /* Отступ от логотипа до текста */
+  object-fit: contain;
   display: block;
   transition: transform 0.3s ease;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
 }
+
 .brand-logo img:hover {
-  transform: scale(1.15) rotate(2deg);
+  transform: scale(1.05) rotate(1deg);
 }
-<div class="brand-logo">
-  <img src="logo.png" alt="Logo">
-  Название
-</div>
-
-
-
-
+<header>
+  <div class="brand-logo">
+    <img src="logo.png" alt="Logo">
+    Название сайта
+  </div>
+</header>
 
 /* Навигация */
 nav {
