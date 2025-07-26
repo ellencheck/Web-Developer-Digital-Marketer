@@ -61,20 +61,21 @@ header .container {
   font-size: 1.4rem;
   letter-spacing: 0.5px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  height: 56px; /* фиксируем нормальную высоту хедера */
+  overflow: hidden; /* ничего не выйдет за пределы */
 }
 
 .brand-logo img {
-  height: 40px;           /* НЕ увеличиваем блок */
+  height: 100%;               /* логотип подстраивается под хедер */
+  aspect-ratio: 1;            /* чтобы был квадратным */
   margin-right: 12px;
   display: block;
   border-radius: 10px;
   border: 1.5px solid white;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
-  transform: scale(2.2);  /* увеличивает ИЗОБРАЖЕНИЕ, не блок */
-  transform-origin: left center;  /* масштабирование идёт вбок, не вниз */
+  object-fit: cover;
 }
-
 .brand-logo img:hover {
   transform: scale(1.05) rotate(1deg);
 }
