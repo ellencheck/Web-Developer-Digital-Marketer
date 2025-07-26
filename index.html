@@ -52,6 +52,20 @@ header .container {
 }
 
 /* Логотип */
+header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #1d6559;
+  color: white;
+  padding: 0 16px;
+  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
 .brand-logo {
   display: flex;
   align-items: center;
@@ -61,20 +75,37 @@ header .container {
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.brand-logo img {
-  width: 40px;
-  height: 96px;
-  margin-right: 16px;
-  display: block;
-  border-radius: 12px;
+.logo-wrapper {
+  width: 32px; /* Вписываем в 40px-хэдер */
+  height: 32px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border-radius: 8px;
   border: 1.5px solid white;
+  overflow: hidden;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-  transition: transform 0.3s ease;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
-.brand-logo img:hover {
-  transform: scale(1.05) rotate(1deg);
+
+.logo-wrapper:hover img {
+  transform: scale(1.2) rotate(2deg);
 }
+<header>
+  <div class="brand-logo">
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    My Brand
+  </div>
+</header>
+
 
 
 /* Навигация */
