@@ -27,53 +27,55 @@
       margin: auto;
     }
 
-/* HEADER */
-header {
-  background: #1d6559;
-  color: white;
-  padding: 8px 0; /* более тонкий верх */
-  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: saturate(180%) blur(10px);
-  transition: background 0.3s ease;
-}
-header:hover {
-  background: #00796b;
-  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
-}
+ /* HEADER */
+    header {
+      background: #1d6559;
+      color: white;
+      padding: 8px 0;
+      box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: saturate(180%) blur(10px);
+      transition: background 0.3s ease;
+    }
+    header:hover {
+      background: #00796b;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+    /* LOGO STYLES */
+    .logo {
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      padding: 4px;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
 
-/* Логотип */
-.brand-logo {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-.brand-logo img {
-  height: 40px;
-  margin-right: 12px;
-  border-radius: 10px;
-  border: 1.5px solid white;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-  transition: transform 0.3s ease;
-}
-.brand-logo img:hover {
-  transform: scale(1.05) rotate(1deg);
-}
-
+  <header>
+    <div class="container">
+      <img src="ellen-chek-logo.png" alt="Ellen Chek Logo" class="logo" />
+      <nav>
+        <!-- Тут можешь вставить навигацию -->
+      </nav>
+    </div>
+  </header>
 /* Навигация */
 nav {
   display: flex;
