@@ -3,77 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alina Web Developer & Digital Marketer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Header with Big Logo</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #a8edea, #fed6e3);
-      color: #222;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    header {
+      background: #1d6559;
+      color: white;
+      padding: 20px 0; /* увеличенный padding для высоты хедера */
+      box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: saturate(180%) blur(10px);
+      transition: background 0.3s ease;
     }
-    .container {
-      width: 90%;
-      max-width: 1100px;
+    header:hover {
+      background: #00796b;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      max-width: 1200px;
       margin: auto;
     }
-
-/* HEADER */
-header {
-  background: #1d6559;
-  color: white;
-  padding: 8px 0; /* более тонкий верх */
-  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: saturate(180%) blur(10px);
-  transition: background 0.3s ease;
-}
-header:hover {
-  background: #00796b;
-  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Логотип */
-.brand-logo {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-.brand-logo img {
-  height: 40px;
-  margin-right: 12px;
-  border-radius: 10px;
-  border: 1.5px solid white;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-  transition: transform 0.3s ease;
-}
-.brand-logo img:hover {
-  transform: scale(1.05) rotate(1deg);
-}
-
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .brand-logo img {
+      height: 70px; /* увеличенная высота логотипа */
+      margin-right: 12px;
+      border-radius: 10px;
+      border: 1.5px solid white;
+      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+      transition: transform 0.3s ease;
+    }
+    .brand-logo img:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand-logo">
+        <img src="images/ellen-logo.png" alt="Ellen Chek Logo" />
+        Alina Web Developer & Digital Marketer
+      </div>
+    </div>
+  </header>
 /* Навигация */
 nav {
   display: flex;
