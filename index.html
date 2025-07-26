@@ -2,107 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alina Web Developer & Digital Marketer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alina</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* === HEADER === */
+    header {
+      background: #1d6559;
+      color: white;
+      padding: 28px 0;
+      box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: saturate(180%) blur(10px);
+      transition: background 0.3s ease;
     }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #a8edea, #fed6e3);
-      color: #222;
-      line-height: 1.6;
-      min-height: 100vh;
+
+    header:hover {
+      background: #00796b;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+    }
+
+    header .container {
       display: flex;
-      flex-direction: column;
-    }
-    .container {
-      width: 90%;
-      max-width: 1100px;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
       margin: auto;
+      padding: 0 24px;
     }
-<div class="brand-card">
-  <img src="images/ellen-logo.png" alt="Ellen Chek Logo" />
-  <div class="brand-text">
-    <h1>Ellen Chek</h1>
-    <p>Web Developer & Digital Marketer</p>
-  </div>
-</div>
-/* === HEADER === */
-header {
-  background: #1d6559;
-  color: white;
-  padding: 28px 0;
-  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: saturate(180%) blur(10px);
-  transition: background 0.3s ease;
-}
 
-header:hover {
-  background: #00796b;
-  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
-}
+    /* === BRAND CARD === */
+    .brand-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
+    .brand-card:hover {
+      transform: scale(1.02);
+    }
 
-/* === BRAND CARD (визитка) === */
-.brand-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 8px 16px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
-}
-.brand-card:hover {
-  transform: scale(1.02);
-}
+    /* === LOGO === */
+    .brand-card img {
+      height: 72px;
+      width: 72px;
+      border-radius: 16px;
+      border: 3px solid white;
+      object-fit: cover;
+      background-color: white;
+      padding: 4px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
 
-/* === LOGO IMAGE === */
-.brand-card img {
-  height: 72px;
-  width: 72px;
-  border-radius: 16px;
-  border: 3px solid white;
-  background-color: white;
-  object-fit: cover;
-  padding: 4px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
+    /* === TEXT NEXT TO LOGO === */
+    .brand-text h1 {
+      font-size: 1.6rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
 
-/* === TEXT NEXT TO LOGO === */
-.brand-text h1 {
-  font-size: 1.6rem;
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-}
-.brand-text p {
-  font-size: 1rem;
-  margin: 4px 0 0;
-  opacity: 0.9;
-  font-weight: 400;
-}
+    .brand-text p {
+      font-size: 1rem;
+      margin: 4px 0 0;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <div class="container">
+      <div class="brand-card">
+        <img src="images/ellen-logo.png" alt="Alina Logo" />
+        <div class="brand-text">
+          <h1>Alina</h1>
+          <p>Web Developer & Digital Marketer</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>
+✅ Где менять имя:
+
+В строке <h1>Alina</h1> — имя.
+
+В строке <p>Web Developer & Digital Marketer</p> — подзаголовок.
+
+Хочешь, чтобы логотип был больше, текст крупнее, или цвет другой — скажи, сделаю без самодеятельности.
+
+
+
+
+
+
+
+
+Вы сказали:
+нет Alina Web Developer & Digital Marketer
+
+
+ChatGPT сказал:
+Поняла! Нужно, чтобы всё было в одну строку:
+
+Alina Web Developer & Digital Marketer
+
+И выглядело красиво как визитка в хедере, рядом с эмблемой.
+
+Вот точный HTML + CSS в одном файле, без самодеятельности:
+
+html
+Копировать
+Редактировать
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alina</title>
+  <style>
+    /* === HEADER === */
+    header {
+      background: #1d6559;
+      color: white;
+      padding: 28px 0;
+      box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: saturate(180%) blur(10px);
+      transition: background 0.3s ease;
+    }
+
+    header:hover {
+      background: #00796b;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    /* === BRAND CARD (логотип + текст) === */
+    .brand-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .brand-card:hover {
+      transform: scale(1.02);
+    }
+
+    .brand-card img {
+      height: 72px;
+      width: 72px;
+      border-radius: 16px;
+      border: 3px solid white;
+      object-fit: cover;
+      background-color: white;
+      padding: 4px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="brand-card">
+        <img src="images/ellen-logo.png" alt="Alina Logo" />
+        <span>Alina Web Developer & Digital Marketer</span>
+      </div>
+    </div>
+  </header>
 /* Навигация */
 nav {
   display: flex;
