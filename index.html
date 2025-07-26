@@ -53,17 +53,36 @@ header .container {
   margin: auto;
 }
 
-/* ЛОГОТИП — увеличенный */
+/* ЛОГО И ТЕКСТ В ЕДИНОМ БЛОКЕ */
+ <div class="brand-logo">
+  <img src="images/ellen-logo.png" alt="Ellen Chek Logo" />
+  <span>Ellen Chek</span>
+</div>
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}
+
 .brand-logo img {
-  height: 56px; /* эмблема заметно крупнее */
-  margin-right: 14px;
-  border-radius: 12px;
+  height: 56px;
+  width: 56px;
+  object-fit: cover;
+  border-radius: 50%;
   border: 2px solid white;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
-  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 2px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .brand-logo img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
 /* Навигация */
