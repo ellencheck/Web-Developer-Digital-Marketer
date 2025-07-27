@@ -2,33 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alina Web Developer & Digital Marketer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #a8edea, #fed6e3);
-      margin: 0;
-      padding: 0;
       color: #222;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
     }
 
     header {
       background-color: #1d6559;
       color: white;
-      padding: 20px 20px 20px 120px;
-      position: relative;
+      padding: 20px 0;
       text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
-    header img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      max-height: 100px;
-      padding: 10px;
+    header h1 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      font-weight: 400;
+      margin-bottom: 15px;
     }
 
     nav {
@@ -36,7 +57,7 @@
       justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     nav a {
@@ -55,14 +76,111 @@
       color: #004d40;
       transform: scale(1.07);
     }
+
+    main {
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* Additional styles for inserted content */
+    section {
+      margin: 40px 0;
+    }
+
+    .hero img,
+    .section-img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1de9b6;
+      color: #004d40;
+    }
+
+    .price-card {
+      background: white;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .portfolio-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .portfolio-gallery img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .contact-content form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-content input,
+    .contact-content textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-content button {
+      padding: 10px;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-content button:hover {
+      background: #1de9b6;
+      color: #004d40;
+    }
+
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <img src="images/logo.png" alt="Alina Logo" />
     <h1>Alina Web Developer</h1>
     <p>Digital Marketing & Creative Code Solutions</p>
+
+    <!-- Navigation -->
     <nav>
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
@@ -70,21 +188,26 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-<!-- HERO Section -->
-<section class="hero">
-  <div class="container">
-    <img src="me.jpg" alt="Alina working at computer" />
-    <div class="hero-text">
-      <h2>Modern, Responsive Websites</h2>
-      <p>
-        I design and code elegant websites using clean HTML and CSS.<br />
-        I also help businesses grow online through effective digital marketing strategies.
-      </p>
-      <a href="#contact" class="btn">Contact Me Here</a>
-    </div>
-  </div>
-</section>
 
+  <main class="container">
+    <h2>Welcome!</h2>
+    <p>This is my professional website. You will find information about me, my projects, skills, and services.</p>
+
+    <!-- Здесь ВСТАВЛЕНЫ твои секции -->
+    <!-- Начало с Hero -->
+    <section class="hero">
+      <div class="container">
+        <img src="me.jpg" alt="Alina working at computer" />
+        <div class="hero-text">
+          <h2>Modern, Responsive Websites</h2>
+          <p>
+            I design and code elegant websites using clean HTML and CSS.<br />
+            I also help businesses grow online through effective digital marketing strategies.
+          </p>
+          <a href="#contact" class="btn">Contact Me Here</a>
+        </div>
+      </div>
+    </section>
 <!-- About Section -->
 <section id="about">
   <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width: 1100px; margin: auto; padding: 0 20px;">
