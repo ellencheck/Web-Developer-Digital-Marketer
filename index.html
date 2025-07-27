@@ -57,120 +57,37 @@
     }
   </style>
 </head>
-  <title>Hero Section</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #ffffff;
-    }
-
-    .hero {
-      padding: 80px 20px;
-      background: #e0f2f1;
-    }
-
-    .hero .container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .hero img {
-      width: 460px;
-      max-width: 100%;
-      border-radius: 30px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-      cursor: pointer;
-    }
-
-    .hero img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero-text {
-      max-width: 560px;
-    }
-
-    .hero-text h2 {
-      font-size: 3.2rem;
-      color: #00796b;
-      margin-bottom: 22px;
-      text-shadow: 0 0 10px #1de9b6cc;
-    }
-
-    .hero-text p {
-      font-size: 1.35rem;
-      color: #004d40;
-      line-height: 1.7;
-      font-weight: 500;
-    }
-
-    .hero-text .btn {
-      display: inline-block;
-      background: linear-gradient(45deg, #00c853, #1de9b6);
-      color: white;
-      padding: 18px 42px;
-      margin-top: 30px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.3rem;
-      box-shadow: 0 8px 25px #00c853bb;
-      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
-    }
-
-    .hero-text .btn:hover {
-      background: linear-gradient(45deg, #00e676, #64ffda);
-      box-shadow: 0 12px 40px #00e676cc;
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 768px) {
-      .hero-text h2 {
-        font-size: 2.4rem;
-        text-align: center;
-      }
-
-      .hero-text p,
-      .hero-text .btn {
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  </style>
-</head>
 <body>
 
-  <section class="hero">
-    <div class="container">
-      <img src="me.jpg" alt="Alina working at computer" />
-      <div class="hero-text">
-        <h2>Modern, Responsive Websites</h2>
-        <p>
-          I design and code elegant websites using clean HTML and CSS.<br>
-          I also help businesses grow online through effective digital marketing strategies.
-        </p>
-        <a href="#contact" class="btn">Contact Me Here</a>
-      </div>
+  <header>
+    <img src="images/logo.png" alt="Alina Logo" />
+    <h1>Alina Web Developer</h1>
+    <p>Digital Marketing & Creative Code Solutions</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+<!-- HERO Section -->
+<section class="hero">
+  <div class="container">
+    <img src="me.jpg" alt="Alina working at computer" />
+    <div class="hero-text">
+      <h2>Modern, Responsive Websites</h2>
+      <p>
+        I design and code elegant websites using clean HTML and CSS.<br />
+        I also help businesses grow online through effective digital marketing strategies.
+      </p>
+      <a href="#contact" class="btn">Contact Me Here</a>
     </div>
-  </section>
+  </div>
+</section>
 
-</body>
-</html>
-
-  <section id="about">
+<!-- About Section -->
+<section id="about">
   <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width: 1100px; margin: auto; padding: 0 20px;">
-    
-    <!-- Текст слева -->
     <div style="flex: 1 1 500px; min-width: 300px;">
       <h2>About Me</h2>
       <p>
@@ -189,8 +106,6 @@
       <p>
         This mix of web development and digital marketing makes me a versatile partner for any business looking to improve their online presence.
       </p>
-
-      <!-- Кнопка -->
       <a href="teaching.html" style="
         display: inline-block;
         margin-top: 24px;
@@ -203,13 +118,10 @@
         text-decoration: none;
         box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
         transition: background 0.3s ease, transform 0.3s ease;
-      " onmouseover="this.style.background='#1de9b6'; this.style.color='#004d40'; this.style.transform='scale(1.05)'"
-         onmouseout="this.style.background='#00796b'; this.style.color='white'; this.style.transform='scale(1)'">
+      " onmouseover="this.style.background='#1de9b6'; this.style.color='#004d40'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='#00796b'; this.style.color='white'; this.style.transform='scale(1)'">
         My Language Teaching Skills
       </a>
     </div>
-
-    <!-- Фото справа -->
     <div style="flex: 0 1 380px; text-align: center;">
       <img src="about-image.jpg" alt="About Me Image" class="section-img" style="
         max-width: 100%;
@@ -222,165 +134,47 @@
       " />
     </div>
   </div>
-</section>F
-  
- <title>Services Section - Balanced Layout</title>
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 60px 20px;
-      color: #004d40;
-    }
+</section>
 
-    #services {
-      background: #e0f7fa;
-      border-radius: 30px;
-      padding: 60px 30px;
-      max-width: 1200px;
-      margin: auto;
-      box-shadow: 0 10px 40px rgba(0, 150, 136, 0.25);
-    }
-
-    #services h2 {
-      text-align: center;
-      color: #00796b;
-      margin-bottom: 50px;
-      font-size: 2.8rem;
-      text-shadow: 0 0 12px #1de9b6cc;
-      letter-spacing: 1px;
-    }
-
-    .services-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-      flex-wrap: wrap;
-    }
-
-    .services-text {
-      flex: 1 1 50%;
-      min-width: 280px;
-    }
-
-    .services-text ul {
-      list-style-type: disc;
-      padding-left: 30px;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      font-weight: 600;
-      color: #00796b;
-    }
-
-    .services-text ul li {
-      margin-bottom: 14px;
-    }
-
-    .section-img {
-      flex: 1 1 40%;
-      max-width: 420px;
-      border-radius: 24px;
-      border: 5px solid #1de9b6;
-      box-shadow: 0 20px 50px rgba(0, 150, 136, 0.35);
-      filter: drop-shadow(0 0 8px #1de9b6cc);
-      transition: transform 0.4s ease, filter 0.4s ease;
-      cursor: pointer;
-    }
-
-    .section-img:hover {
-      transform: scale(1.05) rotate(2deg);
-      filter: drop-shadow(0 0 20px #00e676cc);
-    }
-
-    /* Мобильная адаптация */
-    @media (max-width: 768px) {
-      .services-content {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .services-text ul {
-        padding-left: 18px;
-        font-size: 1.1rem;
-      }
-
-      .section-img {
-        max-width: 90%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services-content">
-      <div class="services-text">
-        <ul>
-          <li>Responsive one-page and multi-page websites</li>
-          <li>HTML/CSS/JavaScript coding with best practices</li>
-          <li>SEO and accessibility optimization</li>
-          <li>Custom digital marketing strategies</li>
-          <li>Social media campaign creation and management</li>
-          <li>Content development: copywriting, graphics, video</li>
-          <li>Analytics setup and performance optimization</li>
-        </ul>
-      </div>
-      <img src="services-image.png" alt="Services Image" class="section-img" />
+<!-- Services Section -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="services-content">
+    <div class="services-text">
+      <ul>
+        <li>Responsive one-page and multi-page websites</li>
+        <li>HTML/CSS/JavaScript coding with best practices</li>
+        <li>SEO and accessibility optimization</li>
+        <li>Custom digital marketing strategies</li>
+        <li>Social media campaign creation and management</li>
+        <li>Content development: copywriting, graphics, video</li>
+        <li>Analytics setup and performance optimization</li>
+      </ul>
     </div>
-  </section>
+    <img src="services-image.png" alt="Services Image" class="section-img" />
+  </div>
+</section>
 
-</body>
-</html>
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <div class="container">
+    <h2>Portfolio</h2>
+    <p>Here are some of the projects and certifications I've completed.</p>
+    <div class="portfolio-gallery">
+      <img src="certificate1.jpg" alt="Certificate 1" />
+      <img src="certificate2.jpg" alt="Certificate 2" />
+      <img src="certificate3.jpg" alt="Certificate 3" />
+    </div>
+    <div style="text-align: center;">
+      <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+        View My White Water Rafting Co.Project
+      </a>
+    </div>
+  </div>
+</section>
 
-  <section id="portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <p>Here are some of the projects and certifications I've completed.</p>
-      <div class="portfolio-gallery">
-        <img src="certificate1.jpg" alt="Certificate 1" />
-        <img src="certificate2.jpg" alt="Certificate 2" />
-        <img src="certificate3.jpg" alt="Certificate 3" />
-      </div>
-      <div style="text-align: center;">
-        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-          View My White Water Rafting Co.Project
-        </a>
-      </div>
-    </div>
-    </div>
-      <div style="text-align: center;">
-        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-          View My Website Project
-        </a>
-      </div>
-    </div>
-    </div>
-      <div style="text-align: center;">
-        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-          View My Website Project
-        </a>
-      </div>
-    </div>
-    </div>
-      <div style="text-align: center;">
-        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-          View My Website Project
-        </a>
-      </div>
-    </div>
-    </div>
-      <div style="text-align: center;">
-        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-          View My Website Project
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <<section id="pricing" class="pricing">
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
   <h2>Pricing</h2>
   <div class="container">
     <div class="price-card">
@@ -426,216 +220,44 @@
       <p class="price">$150–$350</p>
     </div>
   </div>
- <title>Contact Section</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      background: #ffffff;
-    }
+</section>
 
-    #contact {
-      background: #e0f2f1;
-      border-radius: 25px;
-      padding: 60px 20px 80px;
-      box-shadow: 0 15px 40px rgba(0, 200, 160, 0.25);
-      margin: 80px auto;
-      max-width: 1100px;
-    }
-
-    #contact h2 {
-      margin-bottom: 30px;
-      color: #00796b;
-      text-shadow: 0 0 12px #1de9b6cc;
-      font-size: 2.8rem;
-      text-align: center;
-    }
-
-    .contact-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .contact-img {
-      flex: 1 1 300px;
-      max-width: 340px;
-    }
-
-    .contact-img img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0, 120, 100, 0.4);
-      border: 4px solid rgba(29, 233, 182, 0.6);
-      transition: transform 0.3s ease;
-    }
-
-    .contact-img img:hover {
-      transform: scale(1.05);
-    }
-
-    .contact-content {
-      flex: 1 1 360px;
-    }
-
-    .contact-content p {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #004d40;
-      margin: 8px 0;
-    }
-
-    .contact-content a {
-      color: #00796b;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .contact-content a:hover {
-      color: #004d40;
-      text-decoration: underline;
-    }
-
-    form {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    form label {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #004d40;
-    }
-
-    form input,
-    form textarea {
-      padding: 14px 18px;
-      border-radius: 14px;
-      border: 2px solid #1de9b6;
-      font-size: 1.1rem;
-      font-weight: 600;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    form input:focus,
-    form textarea:focus {
-      border-color: #278156;
-      box-shadow: 0 0 12px #00e676bb;
-    }
-
-    form button {
-      width: 200px;
-      align-self: center;
-      background: linear-gradient(45deg, #00c853, #1de9b6);
-      border: none;
-      border-radius: 60px;
-      padding: 18px 0;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 8px 25px #00c853bb;
-      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
-    }
-
-    form button:hover {
-      background: linear-gradient(45deg, #00e676, #64ffda);
-      box-shadow: 0 12px 40px #00e676cc;
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 768px) {
-      .contact-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-img,
-      .contact-content {
-        max-width: 100%;
-      }
-
-      form button {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-flex">
-      <div class="contact-img">
-        <img src="contact-image.jpg" alt="Contact Image" />
-      </div>
-
-      <div class="contact-content">
-        <p>Phone / WhatsApp: <a href="tel:+56941806436">+56 9 4180 6436</a></p>
-        <p>Email: <a href="mailto:ellencheck16@gmail.com">ellencheck16@gmail.com</a></p>
-
-        <form action="#" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-flex">
+    <div class="contact-img">
+      <img src="contact-image.jpg" alt="Contact Image" />
     </div>
-  </section>
 
-</body>
-</html>
+    <div class="contact-content">
+      <p>Phone / WhatsApp: <a href="tel:+56941806436">+56 9 4180 6436</a></p>
+      <p>Email: <a href="mailto:ellencheck16@gmail.com">ellencheck16@gmail.com</a></p>
 
-</style>
-</head>
-<footer>
-    <div class="container footer-flex">
-      <p>&copy; 2025 Alina Web Design</p>
-      <div class="socials">
-        <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      </div>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-  </footer>
-</body>
-</html>
+  </div>
+</section>
 
+<!-- Footer -->
 <footer>
-  <style>
-.container.footer-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-footer p {
-  margin: 0;
-  font-weight: 600;
-  font-size: 1rem;
-  user-select: none;
-  text-align: left; /* вот здесь */
-}
-
-.socials {
-  display: flex;
-  gap: 25px;
-}
-</div>
+  <div class="container footer-flex">
+    <p>&copy; 2025 Alina Web Design</p>
+    <div class="socials">
+      <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
   </div>
 </footer>
