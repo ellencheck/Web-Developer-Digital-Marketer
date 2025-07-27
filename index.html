@@ -6,14 +6,12 @@
   <title>Alina Web Developer & Digital Marketer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #a8edea, #fed6e3);
@@ -23,194 +21,643 @@
       display: flex;
       flex-direction: column;
     }
-
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
     }
 
-    header {
-      background-color: #1d6559;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+/* HEADER */
+header {
+  background: #1d6559;
+  color: white;
+  padding: 8px 0; /* более тонкий верх */
+  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(10px);
+  transition: background 0.3s ease;
+}
+header:hover {
+  background: #00796b;
+  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+}
 
-    header h1 {
-      font-size: 2em;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    header p {
-      font-size: 1.1em;
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
+/* Логотип */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.brand-logo img {
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 10px;
+  border: 1.5px solid white;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease;
+}
+.brand-logo img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
 
-    nav {
+/* Навигация */
+nav {
+  display: flex;
+  gap: 14px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem; /* мельче */
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+nav a:hover, nav a:focus {
+  background: #1de9b6;
+  color: #004d40;
+  transform: scale(1.07);
+}
+
+    /* HERO */
+    .hero {
+      padding: 100px 0 80px;
+      background: white;
       display: flex;
-      justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 10px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      border-radius: 25px;
+      margin-bottom: 60px;
+      gap: 40px;
+      animation: fadeInUp 1s ease forwards;
     }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.06);
-      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    .hero img {
+      max-width: 340px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
-
-    nav a:hover,
-    nav a:focus {
-      background: #1de9b6;
+    .hero img:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+    .hero-text {
+      max-width: 560px;
+    }
+    .hero-text h2 {
+      font-size: 3rem;
+      color: #00796b;
+      margin-bottom: 22px;
+      text-shadow: 0 0 10px #1de9b6cc;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
       color: #004d40;
-      transform: scale(1.07);
+      line-height: 1.6;
+      font-weight: 500;
+      letter-spacing: 0.02em;
     }
-
-    main {
-      padding: 40px 20px;
-      flex: 1;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    /* Additional styles for inserted content */
-    section {
-      margin: 40px 0;
-    }
-
-    .hero img,
-    .section-img {
-      max-width: 100%;
-      border-radius: 12px;
-    }
-
     .btn {
       display: inline-block;
-      margin-top: 16px;
-      padding: 10px 20px;
-      background: #00796b;
+      background: linear-gradient(45deg, #00c853, #1de9b6);
       color: white;
+      padding: 18px 42px;
+      margin-top: 30px;
+      border-radius: 60px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
+      font-weight: 800;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 25px #00c853bb;
+      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    .btn:hover, .btn:focus {
+      background: linear-gradient(45deg, #00e676, #64ffda);
+      box-shadow: 0 12px 40px #00e676cc;
+      transform: scale(1.08);
+      outline: none;
     }
 
-    .btn:hover {
-      background: #1de9b6;
+    /* Sections */
+    section {
+      padding: 60px 0 80px;
+      background: rgba(255 255 255 / 0.95);
+      border-radius: 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease forwards;
+    }
+    section h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px #1de9b6cc;
+      letter-spacing: 1px;
+    }
+
+    /* Section images */
+    .section-img {
+      max-width: 380px;
+      float: right;
+      margin-left: 35px;
+      margin-bottom: 25px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 150, 136, 0.45);
+      border: 5px solid #1de9b6;
+      transition: transform 0.35s ease, filter 0.35s ease;
+      cursor: pointer;
+      filter: drop-shadow(0 0 10px #1de9b6cc);
+    }
+    .section-img:hover {
+      transform: scale(1.1) rotate(3deg);
+      filter: drop-shadow(0 0 20px #00e676cc);
+    }
+
+    /* Text inside About and Services */
+    #about p, #services ul {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      font-size: 1.18rem;
       color: #004d40;
+      line-height: 1.75;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    #about ul, #services ul {
+      list-style-type: disc;
+      padding-left: 44px;
+      color: #00796b;
+      font-weight: 700;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 1.15rem;
+    }
+    #services ul li {
+      margin-bottom: 14px;
     }
 
+    /* Portfolio */
+    #portfolio {
+      background: #e0f2f1;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 200, 160, 0.3);
+      margin-bottom: 70px;
+    }
+    #portfolio h2 {
+      color: #00796b;
+      text-shadow: 0 0 12px #1de9b6cc;
+      margin-bottom: 40px;
+      font-size: 3rem;
+    }
+    #portfolio p {
+      color: #004d40;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 50px;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+    #portfolio .portfolio-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      max-width: 1000px;
+      margin: 0 auto 45px;
+    }
+    #portfolio .portfolio-gallery img {
+      width: 280px;
+      border-radius: 25px;
+      box-shadow: 0 14px 38px rgba(0, 140, 120, 0.45);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    #portfolio .portfolio-gallery img:hover {
+      transform: scale(1.1) rotate(4deg);
+      box-shadow: 0 22px 55px rgba(0, 190, 150, 0.7);
+    }
+    
+   #portfolio .buttons-container {
+  display: inline; /* или display: inline-block */
+}
+
+#portfolio .btn {
+  display: inline-block; /* чтобы кнопки в строку */
+  margin-right: 15px;    /* отступ справа между кнопками */
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 60px;
+  box-shadow: 0 9px 30px #00c853cc;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;   /* не переносить текст внутри кнопки */
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+#portfolio .btn:hover {
+  background-color: #004d40;
+  box-shadow: 0 12px 40px #00bfa5cc;
+  transform: scale(1.05);
+}
+
+
+
+    /* Pricing */
+    .pricing {
+      background: linear-gradient(135deg, #d0f0e9, #fff8fb);
+      padding-bottom: 80px;
+      box-shadow: none;
+      margin-bottom: 70px;
+    }
+    .pricing .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      justify-content: center;
+      padding-top: 40px;
+    }
     .price-card {
       background: white;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 40px 35px;
+      border-radius: 30px;
+      box-shadow: 0 14px 45px rgba(29, 233, 182, 0.55);
+      max-width: 320px;
       text-align: center;
+      font-weight: 700;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
     }
-
-    .portfolio-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .price-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 28px 70px rgba(29, 233, 182, 0.85);
     }
-
-    .portfolio-gallery img {
-      width: 250px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    .price-card h3 {
+      margin-bottom: 18px;
+      color: #00796b;
+      font-size: 1.8rem;
+      text-shadow: 0 0 8px #1de9b6cc;
     }
-
-    .contact-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
+    .price {
+      font-size: 2.3rem;
+      margin: 25px 0;
+      color: #00c853;
+      text-shadow: 0 0 14px #00c853cc;
     }
-
-    .contact-content form {
-      display: flex;
-      flex-direction: column;
+    .price-card p {
+      font-weight: 600;
+      color: #004d40;
+      font-size: 1.2rem;
     }
+   .price-card img {
+  width: 100%;
+  height: 200px;       
+  object-fit: cover;   
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 20px;
+}
 
-    .contact-content input,
-    .contact-content textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
+   /* Contact */
+#contact {
+  background: linear-gradient(135deg, #d0f0ec, #a0d9cd);
+  border-radius: 30px;
+  padding: 60px 20px 80px;
+  box-shadow: 0 20px 60px rgba(0, 150, 130, 0.25);
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
 
-    .contact-content button {
-      padding: 10px;
-      background: #00796b;
+#contact h2 {
+  margin-bottom: 50px;
+  font-size: 3.4rem;
+  color: #00796b;
+  background: linear-gradient(90deg, #1de9b6, #004d40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(29, 233, 182, 0.8);
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+#contact h2:hover {
+  color: #004d40;
+  text-shadow: 0 0 15px #1de9b6cc;
+  cursor: default;
+}
+
+#contact .section-img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0, 120, 100, 0.4);
+  border: 5px solid rgba(29, 233, 182, 0.7);
+  object-fit: cover;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+#contact .section-img:hover {
+  box-shadow: 0 35px 85px rgba(0, 120, 100, 0.6);
+  transform: scale(1.05);
+}
+
+#contact p {
+  font-size: 1.4rem;
+  color: #004d40;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact a {
+  color: #00796b;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #004d40;
+  text-decoration: underline;
+  transform: scale(1.1);
+  outline: none;
+}
+
+
+    /* FOOTER */
+    footer {
+      background: #1d6559;
       color: white;
-      border: none;
-      border-radius: 6px;
+      padding: 25px 0;
+      box-shadow: 0 -8px 20px rgba(0, 77, 64, 0.85);
+      margin-top: auto;
+      user-select: none;
+    }
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 15px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 6px rgba(0,0,0,0.35);
+    }
+
+    /* Social icons */
+    .socials {
+      display: flex;
+      gap: 30px;
+    }
+    .socials a {
+      color: white;
+      font-size: 2rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      text-shadow: 0 0 12px #1de9b6cc;
+      filter: drop-shadow(0 0 12px #1de9b6cc);
+    }
+    .socials a.facebook:hover {
+      color: #3b5998;
+      filter: drop-shadow(0 0 18px #3b5998cc);
+      transform: scale(1.3);
+    }
+    .socials a.instagram:hover {
+      color: #e1306c;
+      filter: drop-shadow(0 0 18px #e1306ccc);
+      transform: scale(1.3);
+    }
+    .socials a.twitter:hover {
+      color: #1da1f2;
+      filter: drop-shadow(0 0 18px #1da1f2cc);
+      transform: scale(1.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-text {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .section-img {
+        float: none !important;
+        display: block;
+        margin: 0 auto 35px !important;
+        max-width: 80% !important;
+      }
+      nav {
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin-top: 15px;
+      }
+      nav a {
+        margin: 0 10px 10px 10px;
+      }
+      .footer-flex {
+        flex-direction: column;
+        gap: 25px;
+        font-size: 1rem;
+      }
+      .pricing .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .price-card {
+        max-width: 100%;
+      }
+      #portfolio .portfolio-gallery img {
+        width: 80vw;
+      }
+    }
+
+    /* Simple animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand-logo">
+        <img src="ellen-chek-logo.png" alt="Ellen Check Logo" />
+        Alina Web Developer & Digital Marketer
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <title>Hero Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      background: #e0f2f1;
+    }
+
+    .hero .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero img {
+      width: 460px;
+      max-width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
     }
 
-    .contact-content button:hover {
-      background: #1de9b6;
-      color: #004d40;
+    .hero img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.45);
     }
 
+    .hero-text {
+      max-width: 560px;
+    }
+
+    .hero-text h2 {
+      font-size: 3.2rem;
+      color: #00796b;
+      margin-bottom: 22px;
+      text-shadow: 0 0 10px #1de9b6cc;
+    }
+
+    .hero-text p {
+      font-size: 1.35rem;
+      color: #004d40;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .hero-text .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #00c853, #1de9b6);
+      color: white;
+      padding: 18px 42px;
+      margin-top: 30px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.3rem;
+      box-shadow: 0 8px 25px #00c853bb;
+      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+    }
+
+    .hero-text .btn:hover {
+      background: linear-gradient(45deg, #00e676, #64ffda);
+      box-shadow: 0 12px 40px #00e676cc;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h2 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+
+      .hero-text p,
+      .hero-text .btn {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Alina Web Developer</h1>
-    <p>Digital Marketing & Creative Code Solutions</p>
 
-    <!-- Navigation -->
-    <nav>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <h2>Welcome!</h2>
-    <p>This is my professional website. You will find information about me, my projects, skills, and services.</p>
-
-    <!-- Здесь ВСТАВЛЕНЫ твои секции -->
-    <!-- Начало с Hero -->
-    <section class="hero">
-      <div class="container">
-        <img src="me.jpg" alt="Alina working at computer" />
-        <div class="hero-text">
-          <h2>Modern, Responsive Websites</h2>
-          <p>
-            I design and code elegant websites using clean HTML and CSS.<br />
-            I also help businesses grow online through effective digital marketing strategies.
-          </p>
-          <a href="#contact" class="btn">Contact Me Here</a>
-        </div>
+  <section class="hero">
+    <div class="container">
+      <img src="me.jpg" alt="Alina working at computer" />
+      <div class="hero-text">
+        <h2>Modern, Responsive Websites</h2>
+        <p>
+          I design and code elegant websites using clean HTML and CSS.<br>
+          I also help businesses grow online through effective digital marketing strategies.
+        </p>
+        <a href="#contact" class="btn">Contact Me Here</a>
       </div>
-    </section>
-<!-- About Section -->
-<section id="about">
+    </div>
+  </section>
+
+</body>
+</html>
+
+  <section id="about">
   <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width: 1100px; margin: auto; padding: 0 20px;">
+    
+    <!-- Текст слева -->
     <div style="flex: 1 1 500px; min-width: 300px;">
       <h2>About Me</h2>
       <p>
@@ -229,6 +676,8 @@
       <p>
         This mix of web development and digital marketing makes me a versatile partner for any business looking to improve their online presence.
       </p>
+
+      <!-- Кнопка -->
       <a href="teaching.html" style="
         display: inline-block;
         margin-top: 24px;
@@ -241,10 +690,13 @@
         text-decoration: none;
         box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
         transition: background 0.3s ease, transform 0.3s ease;
-      " onmouseover="this.style.background='#1de9b6'; this.style.color='#004d40'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='#00796b'; this.style.color='white'; this.style.transform='scale(1)'">
+      " onmouseover="this.style.background='#1de9b6'; this.style.color='#004d40'; this.style.transform='scale(1.05)'"
+         onmouseout="this.style.background='#00796b'; this.style.color='white'; this.style.transform='scale(1)'">
         My Language Teaching Skills
       </a>
     </div>
+
+    <!-- Фото справа -->
     <div style="flex: 0 1 380px; text-align: center;">
       <img src="about-image.jpg" alt="About Me Image" class="section-img" style="
         max-width: 100%;
@@ -257,47 +709,165 @@
       " />
     </div>
   </div>
-</section>
+</section>F
+  
+ <title>Services Section - Balanced Layout</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 60px 20px;
+      color: #004d40;
+    }
 
-<!-- Services Section -->
-<section id="services">
-  <h2>Services</h2>
-  <div class="services-content">
-    <div class="services-text">
-      <ul>
-        <li>Responsive one-page and multi-page websites</li>
-        <li>HTML/CSS/JavaScript coding with best practices</li>
-        <li>SEO and accessibility optimization</li>
-        <li>Custom digital marketing strategies</li>
-        <li>Social media campaign creation and management</li>
-        <li>Content development: copywriting, graphics, video</li>
-        <li>Analytics setup and performance optimization</li>
-      </ul>
-    </div>
-    <img src="services-image.png" alt="Services Image" class="section-img" />
-  </div>
-</section>
+    #services {
+      background: #e0f7fa;
+      border-radius: 30px;
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+      box-shadow: 0 10px 40px rgba(0, 150, 136, 0.25);
+    }
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <div class="container">
-    <h2>Portfolio</h2>
-    <p>Here are some of the projects and certifications I've completed.</p>
-    <div class="portfolio-gallery">
-      <img src="certificate1.jpg" alt="Certificate 1" />
-      <img src="certificate2.jpg" alt="Certificate 2" />
-      <img src="certificate3.jpg" alt="Certificate 3" />
-    </div>
-    <div style="text-align: center;">
-      <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
-        View My White Water Rafting Co.Project
-      </a>
-    </div>
-  </div>
-</section>
+    #services h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 50px;
+      font-size: 2.8rem;
+      text-shadow: 0 0 12px #1de9b6cc;
+      letter-spacing: 1px;
+    }
 
-<!-- Pricing Section -->
-<section id="pricing" class="pricing">
+    .services-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .services-text {
+      flex: 1 1 50%;
+      min-width: 280px;
+    }
+
+    .services-text ul {
+      list-style-type: disc;
+      padding-left: 30px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      font-weight: 600;
+      color: #00796b;
+    }
+
+    .services-text ul li {
+      margin-bottom: 14px;
+    }
+
+    .section-img {
+      flex: 1 1 40%;
+      max-width: 420px;
+      border-radius: 24px;
+      border: 5px solid #1de9b6;
+      box-shadow: 0 20px 50px rgba(0, 150, 136, 0.35);
+      filter: drop-shadow(0 0 8px #1de9b6cc);
+      transition: transform 0.4s ease, filter 0.4s ease;
+      cursor: pointer;
+    }
+
+    .section-img:hover {
+      transform: scale(1.05) rotate(2deg);
+      filter: drop-shadow(0 0 20px #00e676cc);
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 768px) {
+      .services-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .services-text ul {
+        padding-left: 18px;
+        font-size: 1.1rem;
+      }
+
+      .section-img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services-content">
+      <div class="services-text">
+        <ul>
+          <li>Responsive one-page and multi-page websites</li>
+          <li>HTML/CSS/JavaScript coding with best practices</li>
+          <li>SEO and accessibility optimization</li>
+          <li>Custom digital marketing strategies</li>
+          <li>Social media campaign creation and management</li>
+          <li>Content development: copywriting, graphics, video</li>
+          <li>Analytics setup and performance optimization</li>
+        </ul>
+      </div>
+      <img src="services-image.png" alt="Services Image" class="section-img" />
+    </div>
+  </section>
+
+</body>
+</html>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p>Here are some of the projects and certifications I've completed.</p>
+      <div class="portfolio-gallery">
+        <img src="certificate1.jpg" alt="Certificate 1" />
+        <img src="certificate2.jpg" alt="Certificate 2" />
+        <img src="certificate3.jpg" alt="Certificate 3" />
+      </div>
+      <div style="text-align: center;">
+        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+          View My White Water Rafting Co.Project
+        </a>
+      </div>
+    </div>
+    </div>
+      <div style="text-align: center;">
+        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+          View My Website Project
+        </a>
+      </div>
+    </div>
+    </div>
+      <div style="text-align: center;">
+        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+          View My Website Project
+        </a>
+      </div>
+    </div>
+    </div>
+      <div style="text-align: center;">
+        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+          View My Website Project
+        </a>
+      </div>
+    </div>
+    </div>
+      <div style="text-align: center;">
+        <a href="https://ellencheck.github.io/wdd130/wwr/about" class="btn" target="_blank" rel="noopener noreferrer">
+          View My Website Project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <<section id="pricing" class="pricing">
   <h2>Pricing</h2>
   <div class="container">
     <div class="price-card">
@@ -343,44 +913,216 @@
       <p class="price">$150–$350</p>
     </div>
   </div>
-</section>
+ <title>Contact Section</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background: #ffffff;
+    }
 
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-flex">
-    <div class="contact-img">
-      <img src="contact-image.jpg" alt="Contact Image" />
+    #contact {
+      background: #e0f2f1;
+      border-radius: 25px;
+      padding: 60px 20px 80px;
+      box-shadow: 0 15px 40px rgba(0, 200, 160, 0.25);
+      margin: 80px auto;
+      max-width: 1100px;
+    }
+
+    #contact h2 {
+      margin-bottom: 30px;
+      color: #00796b;
+      text-shadow: 0 0 12px #1de9b6cc;
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .contact-img {
+      flex: 1 1 300px;
+      max-width: 340px;
+    }
+
+    .contact-img img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 120, 100, 0.4);
+      border: 4px solid rgba(29, 233, 182, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-img img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-content {
+      flex: 1 1 360px;
+    }
+
+    .contact-content p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #004d40;
+      margin: 8px 0;
+    }
+
+    .contact-content a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .contact-content a:hover {
+      color: #004d40;
+      text-decoration: underline;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    form label {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #004d40;
+    }
+
+    form input,
+    form textarea {
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 2px solid #1de9b6;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #278156;
+      box-shadow: 0 0 12px #00e676bb;
+    }
+
+    form button {
+      width: 200px;
+      align-self: center;
+      background: linear-gradient(45deg, #00c853, #1de9b6);
+      border: none;
+      border-radius: 60px;
+      padding: 18px 0;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 25px #00c853bb;
+      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+    }
+
+    form button:hover {
+      background: linear-gradient(45deg, #00e676, #64ffda);
+      box-shadow: 0 12px 40px #00e676cc;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .contact-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-img,
+      .contact-content {
+        max-width: 100%;
+      }
+
+      form button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-flex">
+      <div class="contact-img">
+        <img src="contact-image.jpg" alt="Contact Image" />
+      </div>
+
+      <div class="contact-content">
+        <p>Phone / WhatsApp: <a href="tel:+56941806436">+56 9 4180 6436</a></p>
+        <p>Email: <a href="mailto:ellencheck16@gmail.com">ellencheck16@gmail.com</a></p>
+
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <div class="contact-content">
-      <p>Phone / WhatsApp: <a href="tel:+56941806436">+56 9 4180 6436</a></p>
-      <p>Email: <a href="mailto:ellencheck16@gmail.com">ellencheck16@gmail.com</a></p>
+</body>
+</html>
 
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
+</style>
+</head>
 <footer>
-  <div class="container footer-flex">
-    <p>&copy; 2025 Alina Web Design</p>
-    <div class="socials">
-      <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <div class="container footer-flex">
+      <p>&copy; 2025 Alina Web Design</p>
+      <div class="socials">
+        <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
+  </footer>
+</body>
+</html>
+
+<footer>
+  <style>
+.container.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  user-select: none;
+  text-align: left; /* вот здесь */
+}
+
+.socials {
+  display: flex;
+  gap: 25px;
+}
+</div>
   </div>
 </footer>
