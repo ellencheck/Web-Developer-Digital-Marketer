@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +12,6 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #a8edea, #fed6e3);
@@ -22,53 +21,59 @@
       display: flex;
       flex-direction: column;
     }
-
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
     }
 
-    /* Хедер в стиле DreamChaser, но с цветом и шрифтом твоего сайта */
-    header {
-      background-color: #1d6559;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+/* HEADER */
+header {
+  background: #1d6559;
+  color: white;
+  padding: 8px 0; /* более тонкий верх */
+  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(10px);
+  transition: background 0.3s ease;
+}
+header:hover {
+  background: #00796b;
+  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.8);
+}
 
-    header h1 {
-      font-size: 2em;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    header p {
-      font-size: 1.1em;
-      font-weight: 400;
-    }
+/* Логотип */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.brand-logo img {
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 10px;
+  border: 1.5px solid white;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease;
+}
+.brand-logo img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
 
-    @media (min-width: 768px) {
-      header {
-        padding: 30px 0;
-      }
-      header h1 {
-        font-size: 2.5em;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>Alina Web Developer</h1>
-    <p>Digital Marketing & Creative Code Solutions</p>
-  </header>
-</body>
-</html>
 /* Навигация */
 nav {
   display: flex;
